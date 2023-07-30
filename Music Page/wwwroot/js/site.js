@@ -1,5 +1,10 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿const title = document.querySelector('h1');
 
-// Write your JavaScript code.
+function animateTitle() {
+    title.style.fontSize = '36px';
+    setTimeout(() => {
+        title.style.fontSize = '24px';
+    }, 1000);
+}
 
+setInterval(animateTitle, 2000);

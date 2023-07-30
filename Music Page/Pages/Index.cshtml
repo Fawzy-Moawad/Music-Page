@@ -1,10 +1,21 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Music";
 }
 
 <div class="text-center">
-    
+
+    <h1>Welcome To The Music World</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/u8n_14AsBKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <button id="animateBtn">Click Me to Animate</button>
+
+    @section Scripts {
+        <script>document.getElementById('animateBtn').addEventListener('click', function() {
+            const iframe = document.querySelector('iframe');
+            iframe.style.transform = 'rotate(360deg)';
+        </script>
+    }
 </div>
 
